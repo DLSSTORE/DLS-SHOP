@@ -216,6 +216,7 @@ details[open]{translate:0 -3px;box-shadow:0 2px 0 rgba(63,242,176,.25),0 22px 44
 </style>
 </head>
 <body>
+</div>
 <canvas id="scene" aria-hidden="true"></canvas>
 <div id="spot" aria-hidden="true"></div>
 <div id="bar" aria-hidden="true"></div>
@@ -228,7 +229,6 @@ details[open]{translate:0 -3px;box-shadow:0 2px 0 rgba(63,242,176,.25),0 22px 44
     <a class="cta-s" href="#lien-he">Nhắn tôi</a>
   </nav>
 </header>
-
 <main id="top">
   <section class="hero">
     <div class="badge"><i></i>Đang nhận thu số lượng lớn</div>
@@ -249,6 +249,263 @@ details[open]{translate:0 -3px;box-shadow:0 2px 0 rgba(63,242,176,.25),0 22px 44
   <section id="huong-dan">
     <h2 class="rv">Mua bán như thế nào?</h2>
     <p class="lead">Hai quy trình, đều làm qua tin nhắn riêng.</p>
+
+    <!-- ================= QR CODE ================= -->
+<div class="qr-card">
+
+  <div class="qr-glow"></div>
+
+  <div class="qr-content">
+
+    <div class="qr-title">
+      QUÉT QR ĐỂ LIÊN HỆ
+    </div>
+
+    <!-- ĐỔI TÊN ẢNH QR Ở ĐÂY -->
+    <div class="qr-image-box">
+      <img src="1790792201502_489283468812542497_5324133071496840200_95a84f9b05c7f122e1f80f6c9e748cd9.jpg" alt="QR Code">
+    </div>
+
+    <div class="qr-name">
+      DLS STORE
+    </div>
+
+    <div class="qr-desc">
+      Quét mã QR để liên hệ nhanh
+    </div>
+
+  </div>
+
+</div>
+
+
+<style>
+
+/* ================= KHUNG QR ================= */
+
+.qr-card {
+  position: relative;
+
+  width: 550px;
+  max-width: calc(100% - 30px);
+
+  margin: 30px auto;
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.025)
+    );
+
+  border: 1px solid rgba(63,242,176,.35);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.35),
+    0 0 40px rgba(63,242,176,.12);
+
+  overflow: hidden;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+
+/* ================= HOVER ================= */
+
+.qr-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 55px rgba(63,242,176,.25);
+}
+
+
+/* ================= ÁNH SÁNG ================= */
+
+.qr-glow {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -90px;
+  right: -90px;
+
+  background: #3ff2b0;
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  opacity: .18;
+
+  pointer-events: none;
+}
+
+
+/* ================= NỘI DUNG ================= */
+
+.qr-content {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+
+/* ================= TIÊU ĐỀ ================= */
+
+.qr-title {
+  margin-bottom: 20px;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  color: #3ff2b0;
+}
+
+
+/* ================= KHUNG ẢNH QR ================= */
+
+.qr-image-box {
+
+  width: 510px;
+  max-width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  margin: 0 auto;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 40px rgba(63,242,176,.20),
+    0 18px 45px rgba(0,0,0,.30);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+
+/* ================= HOVER QR ================= */
+
+.qr-card:hover .qr-image-box {
+
+  transform: scale(1.015);
+
+  box-shadow:
+    0 0 55px rgba(63,242,176,.30),
+    0 20px 50px rgba(0,0,0,.35);
+}
+
+
+/* ================= ẢNH QR ================= */
+
+.qr-image-box img {
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+}
+
+
+/* ================= TÊN ================= */
+
+.qr-name {
+
+  margin-top: 20px;
+
+  font-size: 20px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  color: #ffffff;
+}
+
+
+/* ================= MÔ TẢ ================= */
+
+.qr-desc {
+
+  margin-top: 7px;
+
+  font-size: 13px;
+
+  color: rgba(255,255,255,.55);
+}
+
+
+/* ================= ĐIỆN THOẠI ================= */
+
+@media (max-width: 600px) {
+
+  .qr-card {
+
+    width: 100%;
+
+    max-width: calc(100% - 20px);
+
+    padding: 15px;
+
+    border-radius: 22px;
+  }
+
+  .qr-image-box {
+
+    width: 100%;
+
+    max-width: 510px;
+
+    padding: 9px;
+
+    border-radius: 18px;
+  }
+
+  .qr-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .qr-name {
+    font-size: 17px;
+  }
+
+  .qr-desc {
+    font-size: 11px;
+  }
+
+}
+
+</style> 
     <div class="cols">
       <div class="panel rv">
         <h3>Nếu bạn muốn mua</h3>
